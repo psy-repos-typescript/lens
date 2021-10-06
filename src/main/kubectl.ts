@@ -27,12 +27,13 @@ import { ensureDir, pathExists } from "fs-extra";
 import * as lockFile from "proper-lockfile";
 import { helmCli } from "./helm/helm-cli";
 import { UserStore } from "../common/user-store";
-import { customRequest } from "../common/request";
 import { getBundledKubectlVersion } from "../common/utils/app-version";
 import { isDevelopment, isWindows, isTestEnv } from "../common/vars";
 import { SemVer } from "semver";
 import { getPath } from "../common/utils/getPath";
 import { defaultPackageMirror, packageMirrors } from "../common/user-store/preferences-helpers";
+import got, { Agents } from "got";
+import { HttpProxyAgent } from "http-proxy-agent";
 
 const bundledVersion = getBundledKubectlVersion();
 const kubectlMap: Map<string, string> = new Map([
@@ -299,9 +300,17 @@ export class Kubectl {
     logger.info(`Downloading kubectl ${this.kubectlVersion} from ${this.url} to ${this.path}`);
 
     return new Promise<void>((resolve, reject) => {
-      const stream = customRequest({
+      const { httpsProxy, allowUntrustedCAs } = UserStore.getInstance();
+      const agent: Agents | false = httpsProxy
+        ? {
+          https: new HttpProxyAgent(httpsProxy)
+        }
+        : false;
+      const stream = got.stream({
         url: this.url,
-        gzip: true,
+        decompress: true,
+        rejectUnauthorized: !allowUntrustedCAs,
+        agent,
       });
       const file = fs.createWriteStream(this.path);
 
