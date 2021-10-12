@@ -36,13 +36,14 @@ import { ClusterStore } from "../common/cluster-store";
 import { UserStore } from "../common/user-store";
 import { ExtensionDiscovery } from "../extensions/extension-discovery";
 import { ExtensionLoader } from "../extensions/extension-loader";
-import { App } from "./components/app";
-import { LensApp } from "./lens-app";
+import { ClusterFrame } from "./cluster-frame";
+import { RootFrame } from "./root-frame";
 import { HelmRepoManager } from "../main/helm/helm-repo-manager";
 import { ExtensionInstallationStateStore } from "./components/+extensions/extension-install.store";
 import { DefaultProps } from "./mui-base-theme";
 import configurePackages from "../common/configure-packages";
 import * as initializers from "./initializers";
+import logger from "../common/logger";
 import { HotbarStore } from "../common/hotbar-store";
 import { WeblinkStore } from "../common/weblink-store";
 import { ExtensionsStore } from "../extensions/extensions-store";
@@ -66,25 +67,47 @@ async function attachChromeDebugger() {
 }
 
 type AppComponent = React.ComponentType & {
-  init?(rootElem: HTMLElement): Promise<void>;
+  init(rootElem: HTMLElement): Promise<void>;
 };
 
 export async function bootstrap(App: AppComponent) {
+  const logPrefix = `[BOOTSTRAP-${App.displayName}]:`;
   const rootElem = document.getElementById("app");
 
   await attachChromeDebugger();
   rootElem.classList.toggle("is-mac", isMac);
 
+  logger.info(`${logPrefix} initializing Registries`);
   initializers.initRegistries();
+
+  logger.info(`${logPrefix} initializing CommandRegistry`);
   initializers.initCommandRegistry();
+
+  logger.info(`${logPrefix} initializing EntitySettingsRegistry`);
   initializers.initEntitySettingsRegistry();
+
+  logger.info(`${logPrefix} initializing KubeObjectMenuRegistry`);
   initializers.initKubeObjectMenuRegistry();
-  initializers.intiKubeObjectDetailRegistry();
+
+  logger.info(`${logPrefix} initializing KubeObjectDetailRegistry`);
+  initializers.initKubeObjectDetailRegistry();
+
+  logger.info(`${logPrefix} initializing WelcomeMenuRegistry`);
   initializers.initWelcomeMenuRegistry();
+
+  logger.info(`${logPrefix} initializing WorkloadsOverviewDetailRegist`);
   initializers.initWorkloadsOverviewDetailRegistry();
+
+  logger.info(`${logPrefix} initializing CatalogEntityDetailRegistry`);
   initializers.initCatalogEntityDetailRegistry();
+
+  logger.info(`${logPrefix} initializing CatalogCategoryRegistryEntrie`);
   initializers.initCatalogCategoryRegistryEntries();
+
+  logger.info(`${logPrefix} initializing Catalog`);
   initializers.initCatalog();
+
+  logger.info(`${logPrefix} initializing IpcRendererListeners`);
   initializers.initIpcRendererListeners();
 
   ExtensionLoader.createInstance().init();
@@ -95,9 +118,9 @@ export async function bootstrap(App: AppComponent) {
   SentryInit();
 
   // ClusterStore depends on: UserStore
-  const cs = ClusterStore.createInstance();
+  const clusterStore = ClusterStore.createInstance();
 
-  await cs.loadInitialOnRenderer();
+  await clusterStore.loadInitialOnRenderer();
 
   // HotbarStore depends on: ClusterStore
   HotbarStore.createInstance();
@@ -121,12 +144,12 @@ export async function bootstrap(App: AppComponent) {
   HelmRepoManager.createInstance(); // initialize the manager
 
   // Register additional store listeners
-  cs.registerIpcListener();
+  clusterStore.registerIpcListener();
 
   // init app's dependencies if any
-  if (App.init) {
-    await App.init(rootElem);
-  }
+  logger.info(`${logPrefix} initializing component`);
+  await App.init(rootElem);
+
   render(<>
     {isMac && <div id="draggable-top" />}
     {DefaultProps(App)}
@@ -134,7 +157,7 @@ export async function bootstrap(App: AppComponent) {
 }
 
 // run
-bootstrap(process.isMainFrame ? LensApp : App);
+bootstrap(process.isMainFrame ? RootFrame : ClusterFrame);
 
 
 /**
