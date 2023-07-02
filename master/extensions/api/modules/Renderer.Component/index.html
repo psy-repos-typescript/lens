@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -1554,7 +1554,6 @@
 <li><a href="../../interfaces/Renderer.Component.TabLayoutProps/">TabLayoutProps</a></li>
 <li><a href="../../interfaces/Renderer.Component.TabLayoutRoute/">TabLayoutRoute</a></li>
 <li><a href="../../interfaces/Renderer.Component.TabProps/">TabProps</a></li>
-<li><a href="../../interfaces/Renderer.Component.TableCellProps/">TableCellProps</a></li>
 <li><a href="../../interfaces/Renderer.Component.TableHeadProps/">TableHeadProps</a></li>
 <li><a href="../../interfaces/Renderer.Component.TableProps/">TableProps</a></li>
 <li><a href="../../interfaces/Renderer.Component.TableRowProps/">TableRowProps</a></li>
@@ -1697,14 +1696,14 @@
 <p>Ƭ <strong>DrawerPosition</strong>: <code>"top"</code> | <code>"left"</code> | <code>"right"</code> | <code>"bottom"</code></p>
 <hr />
 <h3 id="icondata">IconData<a class="headerlink" href="#icondata" title="Permanent link">#</a></h3>
-<p>Ƭ <strong>IconData</strong>: <code>string</code> | <code>React.ReactNode</code> | (<code>opt</code>: <a href="../../interfaces/Renderer.Component.IconDataFnArg/"><code>IconDataFnArg</code></a>) =&gt; <code>React.ReactNode</code></p>
-<p>One of the folloing:
+<p>Ƭ <strong>IconData</strong>: <code>string</code> | <code>StrictReactNode</code> | (<code>opt</code>: <a href="../../interfaces/Renderer.Component.IconDataFnArg/"><code>IconDataFnArg</code></a>) =&gt; <code>StrictReactNode</code></p>
+<p>One of the following:
 - A material icon name
 - A react node
 - Or a function that produces a react node</p>
 <hr />
 <h3 id="inputprops">InputProps<a class="headerlink" href="#inputprops" title="Permanent link">#</a></h3>
-<p>Ƭ <strong>InputProps</strong>: <code>Omit</code>&lt;<code>InputElementProps</code>, <code>"onChange"</code> | <code>"onSubmit"</code>> &amp; { <code>autoSelectOnFocus?</code>: <code>boolean</code> ; <code>blurOnEnter?</code>: <code>boolean</code> ; <code>className?</code>: <code>string</code> ; <code>contentRight?</code>: <code>string</code> | <code>React.ReactNode</code> ; <code>defaultValue?</code>: <code>string</code> ; <code>dirty?</code>: <code>boolean</code> ; <code>iconLeft?</code>: <a href="./#icondata"><code>IconData</code></a> ; <code>iconRight?</code>: <a href="./#icondata"><code>IconData</code></a> ; <code>maxRows?</code>: <code>number</code> ; <code>multiLine?</code>: <code>boolean</code> ; <code>showErrorsAsTooltip?</code>: <code>boolean</code> | <code>Omit</code>&lt;<a href="../../interfaces/Renderer.Component.TooltipProps/"><code>TooltipProps</code></a>, <code>"targetId"</code>> ; <code>showValidationLine?</code>: <code>boolean</code> ; <code>theme?</code>: <code>"round-black"</code> | <code>"round"</code> ; <code>trim?</code>: <code>boolean</code> ; <code>validators?</code>: <code>SingleOrMany</code>&lt;<a href="./#inputvalidator"><code>InputValidator</code></a>> ; <code>value?</code>: <code>string</code> ; <code>onChange?</code>: (<code>value</code>: <code>string</code>, <code>evt</code>: <code>ChangeEvent</code>&lt;<code>InputElement</code>>) =&gt; <code>void</code> ; <code>onSubmit?</code>: (<code>value</code>: <code>string</code>, <code>evt</code>: <code>KeyboardEvent</code>&lt;<code>InputElement</code>>) =&gt; <code>void</code>  }</p>
+<p>Ƭ <strong>InputProps</strong>: <code>Omit</code>&lt;<code>InputElementProps</code>, <code>"onChange"</code> | <code>"onSubmit"</code>> &amp; { <code>autoSelectOnFocus?</code>: <code>boolean</code> ; <code>blurOnEnter?</code>: <code>boolean</code> ; <code>className?</code>: <code>string</code> ; <code>contentRight?</code>: <code>string</code> | <code>StrictReactNode</code> ; <code>defaultValue?</code>: <code>string</code> ; <code>dirty?</code>: <code>boolean</code> ; <code>iconLeft?</code>: <a href="./#icondata"><code>IconData</code></a> ; <code>iconRight?</code>: <a href="./#icondata"><code>IconData</code></a> ; <code>maxRows?</code>: <code>number</code> ; <code>multiLine?</code>: <code>boolean</code> ; <code>showErrorsAsTooltip?</code>: <code>boolean</code> | <code>Omit</code>&lt;<a href="../../interfaces/Renderer.Component.TooltipProps/"><code>TooltipProps</code></a>, <code>"targetId"</code>> ; <code>showValidationLine?</code>: <code>boolean</code> ; <code>theme?</code>: <code>"round-black"</code> | <code>"round"</code> ; <code>trim?</code>: <code>boolean</code> ; <code>validators?</code>: <code>SingleOrMany</code>&lt;<a href="./#inputvalidator"><code>InputValidator</code></a>> ; <code>value?</code>: <code>string</code> ; <code>onChange?</code>: (<code>value</code>: <code>string</code>, <code>evt</code>: <code>ChangeEvent</code>&lt;<code>InputElement</code>>) =&gt; <code>void</code> ; <code>onSubmit?</code>: (<code>value</code>: <code>string</code>, <code>evt</code>: <code>KeyboardEvent</code>&lt;<code>InputElement</code>>) =&gt; <code>void</code>  }</p>
 <hr />
 <h3 id="inputvalidation">InputValidation<a class="headerlink" href="#inputvalidation" title="Permanent link">#</a></h3>
 <p>Ƭ <strong>InputValidation</strong>&lt;<code>IsAsync</code>>: (<code>value</code>: <code>string</code>, <code>props?</code>: <a href="./#inputprops"><code>InputProps</code></a>) =&gt; <a href="./#inputvalidationresult"><code>InputValidationResult</code></a>&lt;<code>IsAsync</code>></p>
@@ -1877,10 +1876,10 @@
 <p><a href="../../interfaces/Common.Util.Disposer/"><code>Disposer</code></a></p>
 <hr />
 <h3 id="syncvalidationmessage">SyncValidationMessage<a class="headerlink" href="#syncvalidationmessage" title="Permanent link">#</a></h3>
-<p>Ƭ <strong>SyncValidationMessage</strong>: <code>React.ReactNode</code> | (<code>value</code>: <code>string</code>, <code>props?</code>: <a href="./#inputprops"><code>InputProps</code></a>) =&gt; <code>React.ReactNode</code></p>
+<p>Ƭ <strong>SyncValidationMessage</strong>: <code>StrictReactNode</code> | (<code>value</code>: <code>string</code>, <code>props?</code>: <a href="./#inputprops"><code>InputProps</code></a>) =&gt; <code>StrictReactNode</code></p>
 <hr />
 <h3 id="tablecellelem">TableCellElem<a class="headerlink" href="#tablecellelem" title="Permanent link">#</a></h3>
-<p>Ƭ <strong>TableCellElem</strong>: <code>React.ReactElement</code>&lt;<a href="../../interfaces/Renderer.Component.TableCellProps/"><code>TableCellProps</code></a>></p>
+<p>Ƭ <strong>TableCellElem</strong>: <code>React.ReactElement</code>&lt;<code>TableCellProps</code>></p>
 <hr />
 <h3 id="tableheadelem">TableHeadElem<a class="headerlink" href="#tableheadelem" title="Permanent link">#</a></h3>
 <p>Ƭ <strong>TableHeadElem</strong>: <code>React.ReactElement</code>&lt;<a href="../../interfaces/Renderer.Component.TableHeadProps/"><code>TableHeadProps</code></a>></p>
@@ -2168,7 +2167,7 @@
 <p><code>null</code> | <code>ReactElement</code>&lt;<code>any</code>, <code>any</code>></p>
 <hr />
 <h3 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">#</a></h3>
-<p>▸ <strong>Checkbox</strong>(<code>«destructured»</code>): <code>JSX.Element</code></p>
+<p>▸ <strong>Checkbox</strong>(<code>«destructured»</code>): <code>React.JSX.Element</code></p>
 <h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2185,7 +2184,7 @@
 </tbody>
 </table>
 <h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code></p>
+<p><code>React.JSX.Element</code></p>
 <hr />
 <h3 id="confirmdialog">ConfirmDialog<a class="headerlink" href="#confirmdialog" title="Permanent link">#</a></h3>
 <p>▸ <strong>ConfirmDialog</strong>(<code>props</code>, <code>context?</code>): <code>null</code> | <code>ReactElement</code>&lt;<code>any</code>, <code>any</code>></p>
@@ -2260,7 +2259,7 @@
 <p><code>null</code> | <code>ReactElement</code>&lt;<code>any</code>, <code>any</code>></p>
 <hr />
 <h3 id="draweritem">DrawerItem<a class="headerlink" href="#draweritem" title="Permanent link">#</a></h3>
-<p>▸ <strong>DrawerItem</strong>(<code>«destructured»</code>): <code>JSX.Element</code> | <code>null</code></p>
+<p>▸ <strong>DrawerItem</strong>(<code>«destructured»</code>): <code>React.JSX.Element</code> | <code>null</code></p>
 <h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2277,10 +2276,10 @@
 </tbody>
 </table>
 <h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code> | <code>null</code></p>
+<p><code>React.JSX.Element</code> | <code>null</code></p>
 <hr />
 <h3 id="draweritemlabels">DrawerItemLabels<a class="headerlink" href="#draweritemlabels" title="Permanent link">#</a></h3>
-<p>▸ <strong>DrawerItemLabels</strong>(<code>props</code>): <code>JSX.Element</code> | <code>null</code></p>
+<p>▸ <strong>DrawerItemLabels</strong>(<code>props</code>): <code>React.JSX.Element</code> | <code>null</code></p>
 <h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2297,10 +2296,10 @@
 </tbody>
 </table>
 <h4 id="returns_13">Returns<a class="headerlink" href="#returns_13" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code> | <code>null</code></p>
+<p><code>React.JSX.Element</code> | <code>null</code></p>
 <hr />
 <h3 id="drawertitle">DrawerTitle<a class="headerlink" href="#drawertitle" title="Permanent link">#</a></h3>
-<p>▸ <strong>DrawerTitle</strong>(<code>«destructured»</code>): <code>JSX.Element</code></p>
+<p>▸ <strong>DrawerTitle</strong>(<code>«destructured»</code>): <code>React.JSX.Element</code></p>
 <h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2317,7 +2316,7 @@
 </tbody>
 </table>
 <h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code></p>
+<p><code>React.JSX.Element</code></p>
 <hr />
 <h3 id="formswitch">FormSwitch<a class="headerlink" href="#formswitch" title="Permanent link">#</a></h3>
 <p>▸ <strong>FormSwitch</strong>(<code>props</code>): <code>React.FunctionComponentElement</code>&lt;<code>any</code>></p>
@@ -2334,7 +2333,7 @@
 <tbody>
 <tr>
 <td align="left"><code>props</code></td>
-<td align="left"><code>FormControlLabelProps</code> &amp; { <code>children?</code>: <code>ReactNode</code>  }</td>
+<td align="left"><code>FormControlLabelProps</code> &amp; { <code>children?</code>: <code>StrictReactNode</code>  }</td>
 </tr>
 </tbody>
 </table>
@@ -2745,7 +2744,7 @@
 <p><code>null</code> | <code>ReactElement</code>&lt;<code>any</code>, <code>any</code>></p>
 <hr />
 <h3 id="radio">Radio<a class="headerlink" href="#radio" title="Permanent link">#</a></h3>
-<p>▸ <strong>Radio</strong>&lt;<code>T</code>>(<code>«destructured»</code>): <code>JSX.Element</code></p>
+<p>▸ <strong>Radio</strong>&lt;<code>T</code>>(<code>«destructured»</code>): <code>React.JSX.Element</code></p>
 <h4 id="type-parameters_10">Type parameters<a class="headerlink" href="#type-parameters_10" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2775,10 +2774,10 @@
 </tbody>
 </table>
 <h4 id="returns_32">Returns<a class="headerlink" href="#returns_32" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code></p>
+<p><code>React.JSX.Element</code></p>
 <hr />
 <h3 id="radiogroup">RadioGroup<a class="headerlink" href="#radiogroup" title="Permanent link">#</a></h3>
-<p>▸ <strong>RadioGroup</strong>&lt;<code>T</code>>(<code>«destructured»</code>): <code>JSX.Element</code></p>
+<p>▸ <strong>RadioGroup</strong>&lt;<code>T</code>>(<code>«destructured»</code>): <code>React.JSX.Element</code></p>
 <h4 id="type-parameters_11">Type parameters<a class="headerlink" href="#type-parameters_11" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2808,7 +2807,7 @@
 </tbody>
 </table>
 <h4 id="returns_33">Returns<a class="headerlink" href="#returns_33" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code></p>
+<p><code>React.JSX.Element</code></p>
 <hr />
 <h3 id="resourcemetrics">ResourceMetrics<a class="headerlink" href="#resourcemetrics" title="Permanent link">#</a></h3>
 <p>▸ <strong>ResourceMetrics</strong>&lt;<code>Keys</code>>(<code>«destructured»</code>): <code>Element</code></p>
@@ -2941,7 +2940,7 @@
 <p><code>null</code> | <code>ReactElement</code>&lt;<code>any</code>, <code>any</code>></p>
 <hr />
 <h3 id="submenu">SubMenu<a class="headerlink" href="#submenu" title="Permanent link">#</a></h3>
-<p>▸ <strong>SubMenu</strong>(<code>props</code>): <code>JSX.Element</code></p>
+<p>▸ <strong>SubMenu</strong>(<code>props</code>): <code>React.JSX.Element</code></p>
 <h4 id="parameters_37">Parameters<a class="headerlink" href="#parameters_37" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2958,10 +2957,10 @@
 </tbody>
 </table>
 <h4 id="returns_38">Returns<a class="headerlink" href="#returns_38" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code></p>
+<p><code>React.JSX.Element</code></p>
 <hr />
 <h3 id="switch">Switch<a class="headerlink" href="#switch" title="Permanent link">#</a></h3>
-<p>▸ <strong>Switch</strong>(<code>«destructured»</code>): <code>JSX.Element</code></p>
+<p>▸ <strong>Switch</strong>(<code>«destructured»</code>): <code>React.JSX.Element</code></p>
 <h4 id="parameters_38">Parameters<a class="headerlink" href="#parameters_38" title="Permanent link">#</a></h4>
 <table>
 <thead>
@@ -2978,10 +2977,10 @@
 </tbody>
 </table>
 <h4 id="returns_39">Returns<a class="headerlink" href="#returns_39" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code></p>
+<p><code>React.JSX.Element</code></p>
 <hr />
 <h3 id="switcher">Switcher<a class="headerlink" href="#switcher" title="Permanent link">#</a></h3>
-<p>▸ <strong>Switcher</strong>(<code>«destructured»</code>): <code>JSX.Element</code></p>
+<p>▸ <strong>Switcher</strong>(<code>«destructured»</code>): <code>React.JSX.Element</code></p>
 <p><strong><code>Deprecated</code></strong></p>
 <p>Use <Switch/> instead from "../switch.tsx".</p>
 <h4 id="parameters_39">Parameters<a class="headerlink" href="#parameters_39" title="Permanent link">#</a></h4>
@@ -3000,7 +2999,7 @@
 </tbody>
 </table>
 <h4 id="returns_40">Returns<a class="headerlink" href="#returns_40" title="Permanent link">#</a></h4>
-<p><code>JSX.Element</code></p>
+<p><code>React.JSX.Element</code></p>
 <hr />
 <h3 id="tablayout">TabLayout<a class="headerlink" href="#tablayout" title="Permanent link">#</a></h3>
 <p>▸ <strong>TabLayout</strong>(<code>props</code>, <code>context?</code>): <code>null</code> | <code>ReactElement</code>&lt;<code>any</code>, <code>any</code>></p>
@@ -3283,7 +3282,7 @@ valid if one of the input validators matches the input</p>
 </tr>
 <tr>
 <td align="left"><code>baseValidator.message</code></td>
-<td align="left"><code>null</code> | <code>string</code> | <code>number</code> | <code>boolean</code> | {} | <code>ReactElement</code>&lt;<code>any</code>, <code>string</code> | <code>JSXElementConstructor</code>&lt;<code>any</code>>> | <code>Iterable</code>&lt;<code>ReactNode</code>> | <code>ReactPortal</code> | (<code>value</code>: <code>string</code>, <code>props?</code>: <a href="./#inputprops"><code>InputProps</code></a>) =&gt; <code>ReactNode</code></td>
+<td align="left"><code>null</code> | <code>string</code> | <code>number</code> | <code>boolean</code> | <code>ReactPortal</code> | <code>ReactElement</code>&lt;<code>any</code>, <code>string</code> | <code>JSXElementConstructor</code>&lt;<code>any</code>>> | <code>StrictReactFragment</code> | <code>Iterable</code>&lt;<code>StrictReactNode</code>> | (<code>value</code>: <code>string</code>, <code>props?</code>: <a href="./#inputprops"><code>InputProps</code></a>) =&gt; <code>StrictReactNode</code></td>
 </tr>
 <tr>
 <td align="left"><code>...validators</code></td>
@@ -3403,7 +3402,7 @@ valid if one of the input validators matches the input</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["toc.autohide", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   </body>
